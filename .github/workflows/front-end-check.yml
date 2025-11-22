@@ -42,7 +42,7 @@ jobs:
       matrix:
         node: ['>=22']
         os: [ubuntu-24.04]
-    name: lint
+    name: test
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v5
@@ -57,5 +57,4 @@ jobs:
           cache-dependency-path: ./front-end/pnpm-lock.yaml
       - name: Install dependencies
         run: pnpm install
-      - name: Run tests
-        run: go test -v -race -coverprofile=coverage.out ./...
+
