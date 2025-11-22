@@ -3,6 +3,7 @@ name: Front End Check
 on:
   push:
     paths:
+      - '.github/workflows/front-end-check.yml'
       - 'front-end/**'
 
 permissions:

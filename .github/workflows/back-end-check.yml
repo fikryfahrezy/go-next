@@ -3,6 +3,7 @@ name: Back End Check
 on:
   push:
     paths:
+      - '.github/workflows/back-end-check.yml'
       - 'back-end/**'
 
 permissions:
