@@ -62,5 +62,5 @@ func (h *HealthHandler) HealthCheck(w http.ResponseWriter, r *http.Request) {
 // SetupRoutes configures health check routes
 func (h *HealthHandler) SetupRoutes(server *http_server.Server) {
 	// Health check endpoint (no versioning needed)
-	server.HandleFunc("GET /health", h.HealthCheck)
+	server.HandleFunc("GET /api/health", h.HealthCheck)
 }
