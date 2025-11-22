@@ -26,6 +26,7 @@ jobs:
       - uses: actions/setup-go@v6
         with:
           go-version: ${{ matrix.go }}
+          cache-dependency-path: ./back-end/go.sum
       - name: Download dependencies
         run: go mod download
       - name: Generate API documentation
